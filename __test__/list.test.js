@@ -22,7 +22,6 @@ describe('testing methods of List class', () => {
     expect(myList).toHaveLength(7);
     expect(myList[myList.length - 1]).toEqual(6);
     expect(myList.push(7, 8, 9)).toEqual(10);
-    console.log(myList, 'in PUSH');
   });
 
   test('MAP: throws an error if list is empty', () => {
@@ -39,25 +38,60 @@ describe('testing methods of List class', () => {
   });
 
   test('MAP: returns a new list', () => {
-    const newList = myList.map(num => num * 2);
+    const newList = myList.map((num) => {
+      return num * 2;
+    });
 
     expect(newList.length).toEqual(myList.length); // eslint-disable-line
-
+    
     for (let i = 0; i < newList.length; i++) {
       expect(newList[i]).toEqual(myList[i] * 2);
     }
   });
 
-  // TODO: add tests for error checking
-  test('REDUCE: shoudl reduce the elements in the list to one single multiplied product with NO accumulator passed in', () => {
-    const product = myList.reduce((accumulator, current) => accumulator + current);
+  test('REDUCE: returns undefined if list is empty', () => {
+    const emptyList = new List();
+    expect(emptyList.reduce(e => e)).toBeUndefined();
+  });
+
+  test('REDUCE: throws an error if a function is not passed in', () => {
+    expect(() => {
+      myList.reduce('non-function');
+    }).toThrow();
+  });
+
+  test('REDUCE: should reduce the elements in the list to one single multiplied product with NO accumulator passed in', () => {
+    const product = myList.reduce((accumulator, current) => accumulator * current);
 
     expect(product).toEqual(0);
   });
 
-  test('REDUCE: shoudl reduce the elements in the list to one single value while adding 10 initially', () => {
+  test('REDUCE: should reduce the elements in the list to one single value while adding 10 initially', () => {
     const sum = myList.reduce((acc, cur) => acc + cur, 10);
 
     expect(sum).toEqual(25);
+  });
+
+  test('FOREACH: throws an error if a function is not passed in', () => {
+    console.log(myList);
+    expect(() => {
+      myList.forEach('not a function');
+    }).toThrow();
+  });
+
+  test('FOREACH: throws an error if the list is empty', () => {
+    const emptyList = new List();
+    expect(() => {
+      emptyList.forEach(x => x + 1);
+    }).toThrow();
+  });
+
+  test('FOREACH: should apply the callback to each element in the array', () => {
+    let counter = 0;
+    myList.forEach((x) => {
+      counter += x;
+      console.log('in foreach test:', x);
+    });
+    expect(counter).toBe(15);
   });
 });

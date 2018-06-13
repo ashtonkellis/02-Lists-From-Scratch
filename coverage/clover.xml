@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1528844926216" clover="3.2.0">
-  <project timestamp="1528844926216" name="All files">
-    <metrics statements="21" coveredstatements="20" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4" elements="33" coveredelements="31" complexity="0" loc="21" ncloc="21" packages="1" files="1" classes="1">
-      <file name="list.js" path="/Users/ashtonkellis/codefellows/401/02-Lists-From-Scratch/src/lib/list.js">
-        <metrics statements="21" coveredstatements="20" conditionals="8" coveredconditionals="7" methods="4" coveredmethods="4"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="8" type="stmt"/>
-        <line num="9" count="15" type="stmt"/>
-        <line num="10" count="52" type="stmt"/>
-        <line num="11" count="52" type="stmt"/>
-        <line num="14" count="15" type="stmt"/>
-        <line num="18" count="3" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="22" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="6" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="34" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="38" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="43" count="12" type="stmt"/>
-        <line num="45" count="2" type="stmt"/>
-      </file>
+<coverage generated="1528851268143" clover="3.2.0">
+  <project timestamp="1528851268143" name="All files">
+    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0">
     </metrics>
   </project>
 </coverage>
